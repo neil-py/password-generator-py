@@ -12,15 +12,20 @@ def password_gen():
     while True:
         password_len = int(input("How many characters do you want?: "))
         save_conf = input("Do you want to save the file. y/n: ")
-        purpose = input("What's the password for?: ").upper()
         password_final = ""
         for i in range(0, password_len):
             rand_char = random.choice(char)
             password_final += rand_char
-        print("Here's your password: " + password_final + "\n")
+
+        #if the user input = "y" then the program will ask the user for the purpose and save the details
+        #if the user input ="n" then it will print out the password immediately
         if save_conf == "y":
+            purpose = input("What's the password for?: ").upper()
             password_storage.write("//NEW PASSWORD//\nPurpose: {}\nPassword: {}".format(purpose, password_final))
             password_storage.write("\n\n")
-            return
+
+        print("Here's your password: " + password_final + "\n")
+
+        return
 
 password_gen()
