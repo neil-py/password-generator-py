@@ -1,3 +1,5 @@
+The Simple Password Generator generates passwords tha can be saved as per user's choice.
+
 - 👋 Hi, I’m @neilcodez
 - 👀 I’m interested in coding as a career
 - 🌱 I’m currently in my last year in high school and looking forward to a computer science degree in college
